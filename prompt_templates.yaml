@@ -1,0 +1,257 @@
+---
+# Prompt Templates for Marketing & Branding Use Cases
+# Customize these with your brand voice guidelines and specific requirements
+
+templates:
+  brand_positioning_statement:
+    name: "Brand Positioning Statement"
+    description: "Creates differentiating positioning statements for your AI platform"
+    role: |
+      You are an expert brand strategist with deep experience in positioning 
+      B2B technology companies in the branding and marketing space.
+    task: |
+      Create a concise, compelling brand positioning statement for our AI 
+      growth platform that clearly differentiates us in the market.
+    constraints: |
+      - Tone: Professional yet approachable, confident but not arrogant
+      - Length: 1-2 sentences maximum
+      - Must highlight specific value propositions, not generic benefits
+      - Avoid clichés like "innovative," "game-changing," "revolutionary"
+      - Include at least one quantifiable or timeline-based benefit
+      - Focus on outcomes for target audience (marketing and branding teams)
+    format: |
+      Output as plain text with the positioning statement, followed by a brief 
+      explanation of why it's differentiated (2-3 lines).
+    examples: |
+      Example: "Our platform is the only AI solution built specifically for brand 
+      teams, delivering authentic positioning and messaging in hours rather than months."
+    use_cases:
+      - Target audience segmentation
+      - Messaging hierarchy creation
+      - Competitive differentiation
+
+  marketing_copy_generation:
+    name: "High-Converting Marketing Copy"
+    description: "Generate marketing copy optimized for specific channels and personas"
+    role: |
+      You are a seasoned marketing copywriter who specializes in B2B SaaS 
+      marketing and has written for high-growth technology companies.
+    task: |
+      Write compelling marketing copy for [CHANNEL] that appeals to [PERSONA] 
+      and drives them toward [DESIRED_ACTION].
+    constraints: |
+      - Tone and voice: [BRAND_VOICE_DESCRIPTION]
+      - Character/word limit: [SPECIFY]
+      - Must include a clear value proposition
+      - Address primary pain point: [PAIN_POINT]
+      - Include call-to-action that drives [SPECIFIC_ACTION]
+      - Write from audience perspective, not company perspective
+      - Avoid hyperbole, jargon, and marketing fluff
+    format: |
+      Output only the copy itself, with no introductory text or explanation.
+    examples: |
+      [PROVIDE 1-2 EXAMPLES OF DESIRED OUTPUT]
+    variables:
+      - CHANNEL: "LinkedIn post, Email subject line, Landing page headline, etc."
+      - PERSONA: "Startup CMOs, Enterprise marketing directors, etc."
+      - DESIRED_ACTION: "Click through, Schedule demo, Sign up for trial, etc."
+      - BRAND_VOICE_DESCRIPTION: "Professional but friendly, data-driven, clear"
+      - PAIN_POINT: "Struggling to scale messaging, creating consistent voice, etc."
+
+  content_strategy:
+    name: "Content Strategy & Planning"
+    description: "Develop content strategy aligned with brand positioning and goals"
+    role: |
+      You are a content strategist with expertise in B2B technology marketing 
+      and brand storytelling.
+    task: |
+      Develop a content strategy for [TIME_PERIOD] that supports our positioning 
+      statement and drives [PRIMARY_GOAL].
+    constraints: |
+      - Focus on content that demonstrates [KEY_DIFFERENTIATOR]
+      - Target audience: [AUDIENCE_DESCRIPTION]
+      - Align with brand voice: [VOICE_CHARACTERISTICS]
+      - Content should be original/unique, not recycled industry takes
+      - Prioritize high-impact, sustainable content efforts
+      - Include metrics for success
+    format: |
+      Output as structured JSON with:
+      {
+        "strategy_overview": "Overall approach and thesis",
+        "content_pillars": ["Pillar 1", "Pillar 2", "Pillar 3"],
+        "content_calendar": [
+          {
+            "month": "Month",
+            "topics": [],
+            "formats": [],
+            "goal": ""
+          }
+        ],
+        "success_metrics": [],
+        "resource_requirements": ""
+      }
+    variables:
+      - TIME_PERIOD: "Q2 2024, Next 6 months, etc."
+      - PRIMARY_GOAL: "Brand awareness, Lead generation, Thought leadership, etc."
+      - KEY_DIFFERENTIATOR: "Speed, accuracy, reliability, etc."
+
+  customer_success_messaging:
+    name: "Customer Success & Retention Messages"
+    description: "Create messaging to improve customer retention and expansion"
+    role: |
+      You are a customer success and retention specialist who understands 
+      the customer lifecycle and value realization.
+    task: |
+      Create messaging for [ENGAGEMENT_TYPE] that helps customers understand 
+      and realize [SPECIFIC_VALUE].
+    constraints: |
+      - Tone: Helpful, supportive, not salesy
+      - Length: [SPECIFY]
+      - Focus on customer outcome, not product features
+      - Include social proof or success metrics when relevant
+      - Personalize for [CUSTOMER_SEGMENT]
+      - Must address anticipated objection: [OBJECTION]
+    format: |
+      [SPECIFY_FORMAT]
+    variables:
+      - ENGAGEMENT_TYPE: "Onboarding email, In-app guidance, Check-in call, etc."
+      - SPECIFIC_VALUE: "Time savings, ROI realization, capability enablement, etc."
+      - CUSTOMER_SEGMENT: "Early adopters, SMB, Enterprise, etc."
+      - OBJECTION: "Tool complexity, time commitment, integration challenges, etc."
+
+  social_media_voice:
+    name: "Social Media Voice & Tone Guide"
+    description: "Define and generate social media content matching brand voice"
+    role: |
+      You are a social media strategist who creates engaging, on-brand content 
+      for B2B tech companies.
+    task: |
+      Create a social media post for [PLATFORM] about [TOPIC] that aligns with 
+      our brand voice and encourages [DESIRED_ENGAGEMENT].
+    constraints: |
+      - Platform: [PLATFORM] (LinkedIn, Twitter, etc.)
+      - Character limit: [PLATFORM_LIMIT]
+      - Tone: [TONE_DESCRIPTION] (professional-friendly, data-driven, witty, etc.)
+      - Primary emotion: [TARGET_EMOTION] (curiosity, confidence, connection, etc.)
+      - Include [CONTENT_TYPE] (link, stat, quote, question, etc.)
+      - Avoid: [AVOID_ITEMS] (hashtag overuse, negativity toward competitors, etc.)
+    format: |
+      Output the post only, ready to publish, with any hashtags or links included.
+    variables:
+      - PLATFORM: "LinkedIn, Twitter/X, Instagram, etc."
+      - TOPIC: "New feature, company milestone, industry insight, etc."
+      - DESIRED_ENGAGEMENT: "Likes and shares, Comments, Profile clicks, etc."
+      - TONE_DESCRIPTION: "Professional yet approachable, data-driven, etc."
+      - TARGET_EMOTION: "Curiosity, confidence, connection, etc."
+
+  email_campaign:
+    name: "Email Campaign Series"
+    description: "Create email sequences for onboarding, nurturing, or re-engagement"
+    role: |
+      You are an email marketing expert with proven experience in B2B SaaS 
+      customer lifecycle communications.
+    task: |
+      Create an email sequence for [CAMPAIGN_TYPE] with [NUMBER] emails 
+      designed to [PRIMARY_OBJECTIVE].
+    constraints: |
+      - Email 1 should grab attention within first 50 characters of subject
+      - Each email should have one clear CTA
+      - Maintain [BRAND_VOICE] throughout
+      - Personalization should feel authentic, not forced
+      - Subject lines should pass spam filters (avoid ALL CAPS, excessive punctuation)
+      - Content should provide value, not just sell
+      - Length: [EMAIL_LENGTH] (subject line limit 50 chars, body limit specified)
+    format: |
+      Output as JSON array with:
+      {
+        "sequence": [
+          {
+            "email_number": 1,
+            "subject_line": "",
+            "preview_text": "",
+            "body": "",
+            "cta": "",
+            "send_delay": ""
+          }
+        ]
+      }
+    variables:
+      - CAMPAIGN_TYPE: "Onboarding, Nurture, Re-engagement, etc."
+      - NUMBER: "3, 5, 7 email sequence"
+      - PRIMARY_OBJECTIVE: "Drive trial signup, Educate on value, Recover lapsed users"
+
+---
+
+# Configuration & Customization Guide
+
+customize_these_for_your_platform:
+  
+  brand_voice_characteristics:
+    description: "Define your core brand voice - insert your actual characteristics"
+    example:
+      professionalism: "Professional yet approachable"
+      expertise: "Data-driven and evidence-based"
+      personality: "Confident but humble, avoiding hype"
+      language: "Clear and jargon-free when possible"
+      attitude: "Helpful collaborator, not salesperson"
+
+  target_personas:
+    description: "Define your primary customer personas"
+    example:
+      persona_1:
+        name: "Marketing Director"
+        title: "VP of Marketing or CMO"
+        company_size: "Mid to large enterprise"
+        pain_points: ["Scaling messaging", "Team collaboration", "Brand consistency"]
+        goals: ["Faster campaign execution", "Better brand alignment", "Team efficiency"]
+      persona_2:
+        name: "Startup Founder"
+        title: "Co-founder or Head of Growth"
+        company_size: "Early stage (10-50 people)"
+        pain_points: ["Limited budget", "No dedicated marketing", "Messaging clarity"]
+        goals: ["Professional brand presence", "Clear positioning", "Content efficiency"]
+
+  key_differentiators:
+    description: "What makes your platform unique - update with your actual differentiators"
+    examples:
+      - "Speed: 10x faster brand strategy development"
+      - "Intelligence: AI trained on brand best practices"
+      - "Collaboration: Built for distributed teams"
+      - "Flexibility: Works with any brand style or industry"
+
+---
+
+# Usage Instructions
+
+# 1. Copy the template that best matches your need
+# 2. Replace all [VARIABLE] placeholders with your specific values
+# 3. Add examples from your brand or industry
+# 4. Test and iterate using the methodology framework
+# 5. Version control your templates as brand evolves
+
+# Example Complete Prompt (based on marketing_copy_generation template):
+#
+# [ROLE]
+# You are a seasoned marketing copywriter who specializes in B2B SaaS 
+# marketing and has written for high-growth technology companies.
+#
+# [TASK]
+# Write compelling marketing copy for a LinkedIn post that appeals to 
+# Marketing Directors and drives them toward scheduling a product demo.
+#
+# [CONSTRAINTS]
+# - Tone and voice: Professional yet approachable, data-driven, confident
+# - Character limit: 300 characters for LinkedIn
+# - Must include a clear value proposition focused on speed
+# - Address primary pain point: Scaling messaging across growing teams
+# - Include call-to-action that drives demo scheduling
+# - Write from audience perspective (how it benefits them)
+# - Avoid hyperbole and marketing buzzwords
+#
+# [FORMAT]
+# Output only the copy itself, ready to post on LinkedIn.
+# No introductory text or explanation.
+#
+# [EXAMPLES]
+# "Scaled our brand messaging to 50+ channels without a rebrand chaos.
+# See how we cut messaging work in half. [Schedule demo]"
